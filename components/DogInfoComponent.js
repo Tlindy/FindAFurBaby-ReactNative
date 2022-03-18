@@ -3,11 +3,11 @@ import { Text, View } from "react-native";
 import { Card, Image } from "react-native-elements";
 import { DOGS } from "../shared/dogsAdopt";
 
-function RenderDog({ dog }) {
+export function RenderDog({ dog }) {
     if (dog) {
         return (
             <Card
-                image={require("./images/dogToAdopt9.jpg")}
+                image={dog.image}
                 imageStyle={{ height: 300 }}
             >
                 <Text style={{ margin: 10, fontWeight: "bold", fontSize: 24 }}>

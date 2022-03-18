@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { FlatList } from "react-native";
-import { ListItem } from "react-native-elements";
+import { FlatList, View, Text } from "react-native";
+import { Tile, Divider } from "react-native-elements";
 import { DOGS } from "../shared/dogsAdopt";
-
+//images not showing up and pet info components not working now"
 class AdoptDogs extends Component {
     constructor(props) {
         super(props);
@@ -19,20 +19,26 @@ class AdoptDogs extends Component {
         const { navigate } = this.props.navigation;
         const renderDogAdoptCard = ({ item }) => {
             return (
-                <ListItem
-                    title={item.name}
-                    subtitle={item.breed}
-                    onPress={() => navigate("DogInfo", { dogId: item.id })}
-                    leftAvatar={{ source: require("./images/dogToAdopt1.jpg") }}
-                />
+                <View>
+                    <Tile
+                        title={item.name}
+                        onPress={() => navigate("DogInfo", { dogId: item.id })}
+                        imageSrc={ item.image }
+                        titleStyle={{ alignSelf: "center" }}
+                        contentContainerStyle={{ backgroundColor: "lightpink", margin: 10 }}
+                    />
+                    <Divider style={{ height: 70, backgroundColor: "black" }} />
+                </View>
             );
         };
         return (
-            <FlatList
-                data={this.state.dogs}
-                renderItem={renderDogAdoptCard}
-                keyExtractor={(item) => item.id.toString()}
-            />
+            <View>
+                <FlatList
+                    data={this.state.dogs}
+                    renderItem={renderDogAdoptCard}
+                    keyExtractor={(item) => item.id.toString()}
+                />
+            </View>
         );
     }
 }

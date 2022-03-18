@@ -5,6 +5,7 @@ import Volunteer from "./VolunteerComponent";
 import AdoptCats from "./AdoptCatsComponent";
 import AdoptDogs from "./AdoptDogsComponent";
 import DogInfo from "./DogInfoComponent";
+import CatInfo from "./CatInfoComponent";
 import Constants from "expo-constants";
 import {
     View,
@@ -78,10 +79,24 @@ const HomeNavigator = createStackNavigator(
 
 const AdoptCatsNavigator = createStackNavigator(
     {
-        AdoptCats: { screen: AdoptCats },
+        AdoptCats: {
+            screen: AdoptCats,
+            navigationOptions: ({ navigation }) => ({
+                headerLeft: (
+                    <Icon
+                        name="cat"
+                        type="font-awesome-5"
+                        iconStyle={styles.stackIcon}
+                        onPress={() => navigation.toggleDrawer()}
+                    />
+                ),
+            }),
+        },
+        CatInfo: { screen: CatInfo },
     },
     {
-        defaultNavigationOptions: ({ navigation }) => ({
+        initialRouteName: "AdoptCats",
+        defaultNavigationOptions: {
             headerStyle: {
                 backgroundColor: "lightskyblue",
             },
@@ -89,15 +104,7 @@ const AdoptCatsNavigator = createStackNavigator(
             headerTitleStyle: {
                 color: "white",
             },
-            headerLeft: (
-                <Icon
-                    name="cat"
-                    type="font-awesome-5"
-                    iconStyle={styles.stackIcon}
-                    onPress={() => navigation.toggleDrawer()}
-                />
-            ),
-        }),
+        },
     }
 );
 
