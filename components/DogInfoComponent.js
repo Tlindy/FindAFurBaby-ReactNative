@@ -161,6 +161,6 @@ const styles = StyleSheet.create({
             justifyContent: "space-evenly",
             paddingTop: 10
         }
-})
+});
 
 export default DogInfo;
