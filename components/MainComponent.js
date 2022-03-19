@@ -55,6 +55,8 @@ const AdoptDogsNavigator = createStackNavigator(
 const HomeNavigator = createStackNavigator(
     {
         Home: { screen: Home },
+        DogInfo: { screen: DogInfo },
+        CatInfo: { screen: CatInfo }
     },
     {
         defaultNavigationOptions: ({ navigation }) => ({

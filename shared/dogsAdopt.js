@@ -6,7 +6,7 @@ export const DOGS = [
         image: require("../components/images/dogToAdopt1.jpg"),
         alt: "Dog that can be adopted",
         info: "Here is some information about the dog. This dog is a great dog and is looking for a loving family.",
-        featured: false,
+        featured: true,
     },
     {
         id: 1,
@@ -42,7 +42,7 @@ export const DOGS = [
         image: require("../components/images/dogToAdopt5.jpg"),
         alt: "Dog that can be adopted",
         info: "Here is some information about the dog. This dog is a great dog and is looking for a loving family.",
-        featured: false,
+        featured: true,
     },
     {
         id: 5,
@@ -60,10 +60,10 @@ export const DOGS = [
         image: require("../components/images/dogToAdopt7.jpg"),
         alt: "Dog that can be adopted",
         info: "Here is some information about the dog. This dog is a great dog and is looking for a loving family.",
-        featured: false,
+        featured: true,
     },
     {
-        id:76,
+        id:7,
         name: "Dog8",
         breed: "Breed8",
         image: require("../components/images/dogToAdopt8.jpg"),

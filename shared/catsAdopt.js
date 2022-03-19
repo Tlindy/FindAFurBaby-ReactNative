@@ -37,7 +37,7 @@ export const CATS = [
         image: require("../components/images/catToAdopt5.jpg"),
         alt: "Cat that can be adopted",
         info: "Here is some information about the cat. This cat is a great cat and is looking for a loving family.",
-        featured: true,
+        featured: false,
     },
     {
         id: 5,
@@ -45,7 +45,7 @@ export const CATS = [
         image: require("../components/images/catToAdopt6.jpg"),
         alt: "Cat that can be adopted",
         info: "Here is some information about the cat. This cat is a great cat and is looking for a loving family.",
-        featured: true,
+        featured: false,
     },
     {
         id: 6,
@@ -61,6 +61,6 @@ export const CATS = [
         image: require("../components/images/catToAdopt8.jpg"),
         alt: "Cat that can be adopted",
         info: "Here is some information about the cat. This cat is a great cat and is looking for a loving family.",
-        featured: false,
+        featured: true,
     },
 ];
